@@ -192,7 +192,7 @@ public sealed class GetAllOrdersHandler : PagedQueryHandler<GetAllOrdersQuery, G
 
         return PagedResponse<GetAllOrdersResponse>.Success(
             new(orders.MapToResponse()),
-            orders.TotalCount,
+            orders.Count,
             request.PageNumber,
             request.PageSize);
     }
